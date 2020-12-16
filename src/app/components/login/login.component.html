@@ -1,47 +1,48 @@
-
-<mat-card>
-    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-        <div fxLayout='column' fxLayoutAlign='space-evenly center'>
-            <!-- <h1>Angular</h1> -->
-            <img src="../../../assets/download.png" alt="">
-            <h1>LOGIN PAGE</h1>
-            <mat-form-field appearance="outline">
-                <mat-label>Enter your email</mat-label>
-                <input matInput placeholder="sivaji@example.com" 
-                  required
-                  #email='ngModel' 
-                  name = 'email' ngModel
-                  autocomplete="off"
-                  [(ngModel)]='contact.email' email>
-                <mat-icon matSuffix>email</mat-icon>
-                <mat-error *ngIf='!email.valid && email.touched'>Email is required</mat-error>
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Enter your password</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'"
-                 required
-                 autocomplete="off"
-                 #password='ngModel' ngModel
-                 [(ngModel)]='contact.password'
-                 name='password'>
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
-                <mat-error *ngIf='password.touched'>Password is required</mat-error>
-            </mat-form-field>
-            <div fxLayout='row' fxLayoutAlign='space-evenly center'>
-                <mat-checkbox>Remember me!</mat-checkbox>
-                <a routerLink='forgot'>Forgotten Password</a>
-            </div>
-            <button  class="btn btn-success" 
-                (click)='loginForm()'
-                [disabled]='!loginForm.valid'
-                routerLink="dashboard"
-                type="submit">Signin</button>
-            <hr>
-            <span>OR</span>
-            <hr>
-            <button mat-raised-button color="primary" routerLink="create">Create an Account</button>
-        </div> 
-    </form>
-</mat-card>
+<div class="background">
+    <mat-card>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+            <div fxLayout='column' fxLayoutAlign='space-evenly center'>
+                <!-- <h1>Angular</h1> -->
+                <img src="../../../assets/download.png">
+                <h1>LOGIN PAGE</h1>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your email</mat-label>
+                    <input matInput placeholder="sivaji@example.com" 
+                      required
+                      #email='ngModel' 
+                      name = 'email' ngModel
+                      autocomplete="off"
+                      [(ngModel)]='contact.email' email>
+                    <mat-icon matSuffix>email</mat-icon>
+                    <mat-error *ngIf='!email.valid && email.touched'>Email is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'"
+                     required
+                     autocomplete="off"
+                     #password='ngModel' ngModel
+                     [(ngModel)]='contact.password'
+                     name='password'>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error *ngIf='password.touched'>Password is required</mat-error>
+                </mat-form-field>
+                <div fxLayout='row' fxLayoutAlign='space-evenly center'>
+                    <mat-checkbox>Remember me!</mat-checkbox>
+                    <a routerLink='forgot'>Forgotten Password</a>
+                </div>
+                <button  class="btn btn-success" 
+                    (click)='loginForm()'
+                    [disabled]='!loginForm.valid'
+                    routerLink="dashboard"
+                    type="submit">Signin</button>
+                <hr>
+                <span>OR</span>
+                <hr>
+                <button mat-raised-button color="primary" routerLink="create">Create an Account</button>
+            </div> 
+        </form>
+    </mat-card>
+</div>
