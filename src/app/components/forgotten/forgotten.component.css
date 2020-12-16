@@ -1,0 +1,22 @@
+mat-card{
+    height: auto;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+img{
+    height: 100px;
+    width: 150px;
+}
+mat-form-field{
+    width: 80%;
+}
+button{
+    width: 80%;
+    outline: none;
+}
+h1{
+    font-weight: bold;
+    font-size: 20px;
+}

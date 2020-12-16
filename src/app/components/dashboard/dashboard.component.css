@@ -1,0 +1,15 @@
+span{
+    font-size: medium;
+    padding-left: 25px;
+}
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+h1{
+    
+    font-size: 25px;
+}
+button{
+    outline: none;
+}
