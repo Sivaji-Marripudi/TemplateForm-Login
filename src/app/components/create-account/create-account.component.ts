@@ -16,5 +16,8 @@ export class CreateAccountComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onSubmit(signupForm:NgForm){
+    console.log(signupForm)
+  }
 
 }

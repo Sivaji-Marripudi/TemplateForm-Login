@@ -1,49 +1,55 @@
 <mat-card>
-    <div fxLayout="column" fxLayoutAlign="space-evenly center">
-        <img src="../../../assets/download.png" alt="">
-        <h1>SIGNUP PAGE</h1>
-        <mat-form-field appearance="outline">
-            <mat-label>First Name</mat-label>
-            <input matInput placeholder="Sivaji"
-                name="firstname"
-                #firstName="ngModel"
-                [(ngModel)] = "signup.firstname"
-                required>
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-            <mat-error *ngIf='!firstName.valid && firstName.touched'>Firstname is required</mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-            <mat-label>Last Name</mat-label>
-            <input matInput placeholder="Marripudi"
-                name="lastname"
-                #lastName="ngModel"
-                [(ngModel)]="signup.lastname"
-                required>
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-            <mat-error *ngIf='!lastName.valid && lastName.touched'>Lastname is required</mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-            <mat-label>Enter your email</mat-label>
-            <input matInput placeholder="pat@example.com"
-              name="email"
-              required
-              [(ngModel)]="signup.email"
-              #emailField="ngModel">
-              <mat-icon matSuffix>email</mat-icon>
-              <mat-error *ngIf='!emailField.valid && emailField.touched'>Email is required</mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-            <mat-label>Enter your password</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'"
-             required
-             #password='ngModel' ngModel
-             [(ngModel)]='signup.password'
-             name='password'>
-            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </button>
-            <mat-error *ngIf='password.touched'>Password is required</mat-error>
-        </mat-form-field>
-        <button mat-raised-button color="primary">Signup</button>
-    </div> 
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+        <div fxLayout="column" fxLayoutAlign="space-evenly center">
+            <img src="../../../assets/download.png" alt="">
+            <h1>SIGNUP PAGE</h1>
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="Sivaji"
+                    name="firstname"
+                    autocomplete="off"
+                    #firstName="ngModel"
+                    [(ngModel)] = "signup.firstname"
+                    required>
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-error *ngIf='!firstName.valid && firstName.touched'>Firstname is required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Marripudi"
+                    name="lastname"
+                    autocomplete="off"
+                    #lastName="ngModel"
+                    [(ngModel)]="signup.lastname"
+                    required>
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                <mat-error *ngIf='!lastName.valid && lastName.touched'>Lastname is required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com"
+                  name="email"
+                  required
+                  autocomplete="off"
+                  [(ngModel)]="signup.email"
+                  #emailField="ngModel">
+                  <mat-icon matSuffix>email</mat-icon>
+                  <mat-error *ngIf='!emailField.valid && emailField.touched'>Email is required</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'"
+                 required
+                 autocomplete="off"
+                 #password='ngModel' ngModel
+                 [(ngModel)]='signup.password'
+                 name='password'>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf='password.touched'>Password is required</mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary">Signup</button>
+        </div> 
+    </form>
 </mat-card>

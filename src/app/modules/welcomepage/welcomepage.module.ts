@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WelcomepageComponent } from './welcomepage.component';
-import { SignupComponent } from 'src/app/components/signup/signup.component';
 import { CreateAccountComponent } from 'src/app/components/create-account/create-account.component';
 import { ForgottenComponent } from 'src/app/components/forgotten/forgotten.component';
 import { LoginComponent } from 'src/app/components/login/login.component';
@@ -23,7 +22,6 @@ const routes: Routes = [
   declarations: [
     WelcomepageComponent,
     LoginComponent,
-    SignupComponent,
     CreateAccountComponent,
     ForgottenComponent,
     DashboardComponent
