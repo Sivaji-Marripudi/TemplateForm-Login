@@ -15,7 +15,9 @@ export class LoginComponent {
     this.contact = new Contact()  
   }
   onSubmit(loginForm:NgForm){
-    console.log(loginForm)
+    localStorage.setItem("username",loginForm.value["email"]);
+    localStorage.setItem("password",loginForm.value["password"]);
+    this.rtr.navigate(['dashboard'])
   }
 }
   

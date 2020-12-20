@@ -6,14 +6,14 @@ import { Router } from '@angular/router';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
 
   constructor(public rtr:Router) { }
 
-  ngOnInit(): void {
-  }
+  
   gotoPage(){
     this.rtr.navigate[(" ")]
   }
+  
 
 }

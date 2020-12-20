@@ -17,14 +17,14 @@ img{
 }
 h1{
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
     
 }
 mat-form-field{
     width: 80%;   
 }
 a{
-    padding-left:90px;
+    margin-left: 90px;
     text-decoration: none;
     color: black;
 }

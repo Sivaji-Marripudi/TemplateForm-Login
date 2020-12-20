@@ -1,0 +1,21 @@
+span{
+    font-size: medium;
+    padding-left: 25px;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+h1{
+    
+    font-size: 25px;
+    color: white;
+}
+button{
+    outline: none;
+    background-color: gray;
+    color: white;
+}
+mat-toolbar{
+    background-color: darkslategray;
+}

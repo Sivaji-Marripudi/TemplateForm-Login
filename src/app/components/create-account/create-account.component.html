@@ -12,7 +12,7 @@
                         #firstName="ngModel"
                         [(ngModel)] = "signup.firstname"
                         required>
-                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-icon matSuffix>account_circle</mat-icon>
                     <mat-error *ngIf='!firstName.valid && firstName.touched'>Firstname is required</mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
@@ -23,7 +23,7 @@
                         #lastName="ngModel"
                         [(ngModel)]="signup.lastname"
                         required>
-                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <mat-icon matSuffix>account_circle</mat-icon>
                     <mat-error *ngIf='!lastName.valid && lastName.touched'>Lastname is required</mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline">

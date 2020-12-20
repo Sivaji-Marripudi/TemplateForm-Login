@@ -1,0 +1,30 @@
+<!-- <div class="card shadow-sm">
+    <img class="bd-placeholder-img card-img-top" width="100%" src="../../../fastrackwatch2.jpeg">
+        <div class="card-body">
+            <p class="card-text">
+              {{productItem.description}}
+            </p>
+        <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">view details</button>
+        </div>
+    <small class="text-muted">{{productItem.price|currency:'INR' }}</small>
+</div> -->
+
+<mat-card class="example-card">
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        {{productItem.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <strong>{{ productItem.price|currency:'INR' }}</strong>
+      <div fxLayout="row" fxLayoutAlign="space-evenly">
+        <button mat-flat-button>ADDTOCART</button>
+        <button mat-button>VIEWDETAILS</button>
+      </div>
+    </mat-card-actions>
+</mat-card>
+  

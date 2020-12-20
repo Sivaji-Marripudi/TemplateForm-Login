@@ -9,6 +9,16 @@ import { FormsModule,NgForm } from '@angular/forms';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { Routes,RouterModule } from "@angular/router";
+import { NavComponent } from 'src/app/components/shared/nav/nav.component';
+import { HeaderComponent } from 'src/app/components/shared/header/header.component';
+import { FooterComponent } from 'src/app/components/shared/footer/footer.component';
+import { ShoppingCartComponent } from 'src/app/components/shopping-cart/shopping-cart.component';
+import { CartComponent } from 'src/app/components/shopping-cart/cart/cart.component';
+import { FiltersComponent } from 'src/app/components/shopping-cart/filters/filters.component';
+import { ProductListComponent } from 'src/app/components/shopping-cart/product-list/product-list.component';
+import { CartItemComponent } from 'src/app/components/shopping-cart/cart/cart-item/cart-item.component';
+import { ProductItemComponent } from 'src/app/components/shopping-cart/product-list/product-item/product-item.component';
+
 
 const routes: Routes = [
   {path:'',component:WelcomepageComponent},
@@ -24,8 +34,16 @@ const routes: Routes = [
     LoginComponent,
     CreateAccountComponent,
     ForgottenComponent,
-    DashboardComponent
-  
+    DashboardComponent,
+    NavComponent,
+    HeaderComponent,
+    FooterComponent,
+    ShoppingCartComponent,
+    CartComponent,
+    FiltersComponent,
+    ProductListComponent,
+    CartItemComponent,
+    ProductItemComponent
   ],
   imports: [
     CommonModule,FormsModule,MaterialModule,FlexLayoutModule,RouterModule.forChild(routes)

@@ -14,6 +14,9 @@
 mat-form-field{
     width: 80%;
 }
+h1{
+    font-weight: bold;
+}
 img{
     height: 100px;
     width: 150px;

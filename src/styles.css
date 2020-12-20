@@ -2,3 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+body{ width: 100%;}
+.cart-item{
+    font-size: 10px;
+    margin-right: 10px;
+}
